@@ -408,8 +408,8 @@ body {
         grid-template-columns: auto;
   }
   .atributes_3 {
-    -ms-grid-columns: minmax(250px, 1fr);
-        grid-template-columns: minmax(250px, 1fr);
+    -ms-grid-columns: minmax(180px, 1fr);
+        grid-template-columns: minmax(180px, 1fr);
     min-width: 100%;
   }
   .sprites {
