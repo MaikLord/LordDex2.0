@@ -12,6 +12,8 @@ var pokemonimg = buttonValue.dataset.value;
 
 const fetchPokemon = (name) => {
   const pokeName = document.getElementById("name");
+  const pokeName1 = document.getElementById("name1");
+  const pokeName2 = document.getElementById("name2");
   const pokeID = document.getElementById("pokemonid");
   const pokeType = document.getElementById("ty1");
   const pokeAbility1 = document.getElementById("ab1");
@@ -44,9 +46,7 @@ const fetchPokemon = (name) => {
       pokeStatus5.innerHTML = pokemon.stats[4].base_stat;
       pokeStatus6.innerHTML = pokemon.stats[5].base_stat;
       pokeSprint1.src = pokemon.sprites.front_default;
-      pokeSprint2.src = pokemon.sprites.back_default;
       pokeSprint3.src = pokemon.sprites.front_shiny;
-      pokeSprint4.src = pokemon.sprites.back_shiny;
 
       const HP = document.getElementById("st1").innerHTML;
       const ATK = document.getElementById("st2").innerHTML;
@@ -57,172 +57,157 @@ const fetchPokemon = (name) => {
 
       switch (true) {
         case HP >= 0 && HP <= 40:
-          document.getElementById("st1").style.color = "#E84443";
-          document.getElementById("st1").style.width = "60%";
+          document.getElementById("st1").style.backgroundColor = "#a02b2b";
           document.getElementById("st1").style.transition = "0.5s";
+          document.getElementById("st1").style.color = "white";
+          document.getElementById("st1").style.width = "60%";
         default:
           switch (true) {
-            case HP >= 51 && HP <= 119:
+            case HP >= 41 && HP <= 104:
+              document.getElementById("st1").style.backgroundColor = "#FFF";
+              document.getElementById("st1").style.transition = "0.5s";
               document.getElementById("st1").style.color = "#202020";
               document.getElementById("st1").style.width = "80%";
-              document.getElementById("st1").style.transition = "0.5s";
             default:
               switch (true) {
-                case HP >= 41 && HP >= 120:
-                  document.getElementById("st1").style.color = "#8abf8a";
-                  document.getElementById("st1").style.width = "100%";
+                case HP >= 105:
+                  document.getElementById("st1").style.backgroundColor =
+                    "#0FC659";
                   document.getElementById("st1").style.transition = "0.5s";
+                  document.getElementById("st1").style.color = "#FFF";
+                  document.getElementById("st1").style.width = "100%";
                 default:
-                  switch (true) {
-                    case ATK >= 0 && ATK <= 40:
-                      document.getElementById("st2").style.color = "#E84443";
-                      document.getElementById("st2").style.width = "60%";
-                      document.getElementById("st2").style.transition = "0.5s";
-                    default:
-                      switch (true) {
-                        case ATK >= 41 && ATK <= 100:
-                          document.getElementById("st2").style.color =
-                            "#202020";
-                          document.getElementById("st2").style.width = "80%";
-                          document.getElementById("st2").style.transition =
-                            "0.5s";
-                        default:
-                          switch (true) {
-                            case ATK >= 101 && ATK <= 500:
-                              document.getElementById("st2").style.color =
-                                "#8abf8a";
-                              document.getElementById("st2").style.width =
-                                "100%";
-                              document.getElementById("st2").style.transition =
-                                "0.5s";
-                            default:
-                              switch (true) {
-                                case DEF >= 75 && DEF >= 75:
-                                  document.getElementById("st3").style.color =
-                                    "#8abf8a";
-                                  document.getElementById("st3").style.width =
-                                    "100%";
-                                  document.getElementById(
-                                    "st3"
-                                  ).style.transition = "0.5s";
-                                default:
-                                  switch (true) {
-                                    case DEF <= 74 && DEF <= 74:
-                                      document.getElementById(
-                                        "st3"
-                                      ).style.color = "#202020";
-                                      document.getElementById(
-                                        "st3"
-                                      ).style.width = "80%";
-                                      document.getElementById(
-                                        "st4"
-                                      ).style.transition = "0.5s";
-
-                                    default:
-                                      switch (true) {
-                                        case SPA >= 75 && SPA >= 75:
-                                          document.getElementById(
-                                            "st4"
-                                          ).style.color = "#8abf8a";
-                                          document.getElementById(
-                                            "st4"
-                                          ).style.width = "100%";
-                                          document.getElementById(
-                                            "st4"
-                                          ).style.transition = "0.5s";
-
-                                        default:
-                                          switch (true) {
-                                            case SPA <= 74 && SPA <= 74:
-                                              document.getElementById(
-                                                "st4"
-                                              ).style.color = "#202020";
-                                              document.getElementById(
-                                                "st4"
-                                              ).style.width = "80%";
-                                              document.getElementById(
-                                                "st4"
-                                              ).style.transition = "0.5s";
-                                            default:
-                                              switch (true) {
-                                                case SPD >= 80 && SPD >= 80:
-                                                  document.getElementById(
-                                                    "st5"
-                                                  ).style.color = "#8abf8a";
-                                                  document.getElementById(
-                                                    "st5"
-                                                  ).style.width = "100%";
-                                                  document.getElementById(
-                                                    "st5"
-                                                  ).style.transition = "0.5s";
-
-                                                default:
-                                                  switch (true) {
-                                                    case SPD <= 79 && SPD <= 79:
-                                                      document.getElementById(
-                                                        "st5"
-                                                      ).style.color = "#202020";
-                                                      document.getElementById(
-                                                        "st5"
-                                                      ).style.width = "80%";
-                                                      document.getElementById(
-                                                        "st5"
-                                                      ).style.transition =
-                                                        "0.5s";
-
-                                                    default:
-                                                      switch (true) {
-                                                        case Speed >= 83 &&
-                                                          Speed >= 83:
-                                                          document.getElementById(
-                                                            "st6"
-                                                          ).style.color =
-                                                            "#8abf8a";
-                                                          document.getElementById(
-                                                            "st6"
-                                                          ).style.width =
-                                                            "100%";
-                                                          document.getElementById(
-                                                            "st6"
-                                                          ).style.transition =
-                                                            "0.5s";
-
-                                                        default:
-                                                          switch (true) {
-                                                            case Speed <= 82 &&
-                                                              Speed <= 82:
-                                                              document.getElementById(
-                                                                "st6"
-                                                              ).style.color =
-                                                                "#202020";
-                                                              document.getElementById(
-                                                                "st6"
-                                                              ).style.width =
-                                                                "80%";
-                                                              document.getElementById(
-                                                                "st6"
-                                                              ).style.transition =
-                                                                "0.5s";
-
-                                                            default:
-                                                          }
-                                                      }
-                                                  }
-                                              }
-                                          }
-                                      }
-                                  }
-                              }
-                          }
-                      }
-                  }
+              }
+          }
+      }
+      switch (true) {
+        case ATK >= 0 && ATK <= 40:
+          document.getElementById("st2").style.backgroundColor = "#a02b2b";
+          document.getElementById("st2").style.transition = "0.5s";
+          document.getElementById("st2").style.color = "white";
+          document.getElementById("st2").style.width = "60%";
+        default:
+          switch (true) {
+            case ATK >= 41 && ATK <= 90:
+              document.getElementById("st2").style.backgroundColor = "#FFF";
+              document.getElementById("st2").style.transition = "0.5s";
+              document.getElementById("st2").style.color = "#202020";
+              document.getElementById("st2").style.width = "80%";
+            default:
+              switch (true) {
+                case ATK >= 91:
+                  document.getElementById("st2").style.backgroundColor =
+                    "#0FC659";
+                  document.getElementById("st2").style.transition = "0.5s";
+                  document.getElementById("st2").style.color = "#FFF";
+                  document.getElementById("st2").style.width = "100%";
+                default:
+              }
+          }
+      }
+      switch (true) {
+        case DEF >= 0 && DEF <= 40:
+          document.getElementById("st3").style.backgroundColor = "#a02b2b";
+          document.getElementById("st3").style.transition = "0.5s";
+          document.getElementById("st3").style.color = "white";
+          document.getElementById("st3").style.width = "60%";
+        default:
+          switch (true) {
+            case DEF >= 41 && DEF <= 80:
+              document.getElementById("st3").style.backgroundColor = "#FFF";
+              document.getElementById("st3").style.transition = "0.5s";
+              document.getElementById("st3").style.color = "#202020";
+              document.getElementById("st3").style.width = "80%";
+            default:
+              switch (true) {
+                case DEF >= 81:
+                  document.getElementById("st3").style.backgroundColor =
+                    "#0FC659";
+                  document.getElementById("st3").style.transition = "0.5s";
+                  document.getElementById("st3").style.color = "#FFF";
+                  document.getElementById("st3").style.width = "100%";
+                default:
+              }
+          }
+      }
+      switch (true) {
+        case SPA >= 0 && SPA <= 40:
+          document.getElementById("st4").style.backgroundColor = "#a02b2b";
+          document.getElementById("st4").style.transition = "0.5s";
+          document.getElementById("st4").style.color = "white";
+          document.getElementById("st4").style.width = "60%";
+        default:
+          switch (true) {
+            case SPA >= 41 && SPA <= 80:
+              document.getElementById("st4").style.backgroundColor = "#FFF";
+              document.getElementById("st4").style.transition = "0.5s";
+              document.getElementById("st4").style.color = "#202020";
+              document.getElementById("st4").style.width = "80%";
+            default:
+              switch (true) {
+                case SPA >= 81:
+                  document.getElementById("st4").style.backgroundColor =
+                    "#0FC659";
+                  document.getElementById("st4").style.transition = "0.5s";
+                  document.getElementById("st4").style.color = "#FFF";
+                  document.getElementById("st4").style.width = "100%";
+                default:
+              }
+          }
+      }
+      switch (true) {
+        case SPD >= 0 && SPD <= 40:
+          document.getElementById("st5").style.backgroundColor = "#a02b2b";
+          document.getElementById("st5").style.transition = "0.5s";
+          document.getElementById("st5").style.color = "white";
+          document.getElementById("st5").style.width = "60%";
+        default:
+          switch (true) {
+            case SPD >= 41 && SPD <= 80:
+              document.getElementById("st5").style.backgroundColor = "#FFF";
+              document.getElementById("st5").style.transition = "0.5s";
+              document.getElementById("st5").style.color = "#202020";
+              document.getElementById("st5").style.width = "80%";
+            default:
+              switch (true) {
+                case SPD >= 81:
+                  document.getElementById("st5").style.backgroundColor =
+                    "#0FC659";
+                  document.getElementById("st5").style.transition = "0.5s";
+                  document.getElementById("st5").style.color = "#FFF";
+                  document.getElementById("st5").style.width = "100%";
+                default:
+              }
+          }
+      }
+      switch (true) {
+        case Speed >= 0 && Speed <= 35:
+          document.getElementById("st6").style.backgroundColor = "#a02b2b";
+          document.getElementById("st6").style.transition = "0.5s";
+          document.getElementById("st6").style.color = "white";
+          document.getElementById("st6").style.width = "60%";
+        default:
+          switch (true) {
+            case Speed >= 36 && Speed <= 85:
+              document.getElementById("st6").style.backgroundColor = "#FFF";
+              document.getElementById("st6").style.transition = "0.5s";
+              document.getElementById("st6").style.color = "#202020";
+              document.getElementById("st6").style.width = "80%";
+            default:
+              switch (true) {
+                case Speed >= 86:
+                  document.getElementById("st6").style.backgroundColor =
+                    "#0FC659";
+                  document.getElementById("st6").style.transition = "0.5s";
+                  document.getElementById("st6").style.color = "#FFF";
+                  document.getElementById("st6").style.width = "100%";
+                default:
               }
           }
       }
     });
 };
 fetchPokemon();
-
 /* Function modified */
 function next() {
   fetchPokemon();

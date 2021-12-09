@@ -146,7 +146,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   float: right;
-  margin-top: -9.4em;
+  margin-top: -2%;
   margin-left: -100px;
   border-radius: 5px;
   padding: 15px;
@@ -286,7 +286,6 @@ body {
   border-radius: 5px;
   background-color: #e84443;
   font-weight: 600;
-  width: 400px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -299,9 +298,6 @@ body {
   margin: 10px 20px 10px 0;
   border-radius: 5px;
   background-color: #606060;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
 }
 
@@ -318,7 +314,7 @@ body {
   text-align: center;
   border-radius: 3px;
   margin: 10px 0;
-  margin-left: -50px;
+  margin-left: -40px;
   width: 80%;
 }
 
@@ -345,13 +341,16 @@ body {
 .sprites {
   display: -ms-grid;
   display: grid;
-  margin-top: 3em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
+}
+
+.sprites img {
+  background-color: #606060;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 600px) {
