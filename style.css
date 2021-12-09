@@ -184,7 +184,6 @@ body {
 }
 
 .search input[type="text"] {
-  display: none;
   margin: 15px;
   padding-left: 20px;
   font-style: italic;
@@ -524,6 +523,10 @@ body {
   .atributes_1 {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+  }
+  .search input[type="text"] {
+  display: none;
+
   }
   .atributes_2 {
     -ms-grid-columns: auto;
