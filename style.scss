@@ -28,7 +28,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-.credits {
+.credits1 {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -40,27 +40,30 @@ body {
   justify-content: center;
   align-items: center;
 }
-.credits col {
+.credits2 {
+  display: none;
+}
+.credits1 col {
   flex-direction: column;
 }
-.credits col {
+.credits1 col {
   flex-direction: row;
 }
-.credits h1 {
+.credits1 h1 {
   margin-top: 25px;
   font-size: 12pt;
 }
-.credits i {
+.credits1 i {
   margin: 10px 15px;
   flex-direction: row;
   font-size: 20pt;
 }
-.credits a {
+.credits1 a {
   color: black;
   flex-direction: row;
   font-size: 20pt;
 }
-.credits a:hover {
+.credits1 a:hover {
   color: #e84443;
 }
 .block {
@@ -113,6 +116,7 @@ body {
   background-color: #fff;
   margin: 15px;
   border-radius: 5px;
+  min-height: min-content;
 }
 .search input {
   padding: 15px;
@@ -170,6 +174,7 @@ body {
   color: white;
   background-color: #404040;
   border-radius: 5px;
+  min-height: min-content;
 }
 .atributes_1 {
   display: grid;
@@ -189,6 +194,7 @@ body {
   border-radius: 5px;
   width: 100%;
   align-items: center;
+  min-width: 280px;
 }
 #pT {
   padding: 15px;
@@ -228,6 +234,7 @@ body {
   margin: 10px 0;
   margin-left: -40px;
   width: 80%;
+  min-width: max-content;
 }
 #ty1 {
   display: flex;
@@ -252,10 +259,187 @@ body {
   border-radius: 5px;
 }
 @media only screen and (max-width: 600px) {
+  .container {
+    all: unset;
+  }
   .background {
-    width: 100vw;
+    all: unset;
+    min-height: 100vh;
   }
   .pokename {
-    width: 100vw;
+    all: unset;
+  }
+  .block {
+    min-width: 100ch;
+  }
+  .search {
+    width: max-content;
+    min-width: 100ch;
+    min-height: 100vh;
+    margin: 15px;
+    padding-bottom: 10px;
+  }
+  .refresh {
+    display: none;
+  }
+  #search {
+    width: 32.3em;
+    font-size: 16pt;
+  }
+  .atributes_1 {
+    grid-template-columns: auto;
+  }
+  .atributes_2 {
+    grid-template-columns: auto;
+  }
+  .atributes_3 {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+  .sprites {
+    grid-template-columns: auto;
+  }
+  #ty1 {
+    width: min-content;
+  }
+  #st1,
+  #st2,
+  #st3,
+  #st4,
+  #st5,
+  #st6 {
+    margin: 0;
+  }
+  .credits1 {
+    display: none;
+  }
+  .credits2 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    margin-right: 5px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    min-width: 100ch;
+  }
+  .credits2 col {
+    flex-direction: column;
+  }
+  .credits2 col {
+    flex-direction: row;
+  }
+  .credits2 h1 {
+    margin-top: 25px;
+    font-size: 12pt;
+  }
+  .credits2 i {
+    margin: 10px 15px;
+    flex-direction: row;
+    font-size: 20pt;
+  }
+  .credits2 a {
+    color: black;
+    flex-direction: row;
+    font-size: 20pt;
+  }
+  .credits2 a:hover {
+    color: #e84443;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .refresh {
+    display: none;
+  }
+  .atributes_3 {
+    min-width: 260px;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .container {
+    all: unset;
+  }
+  .background {
+    all: unset;
+  }
+  .pokename {
+    all: unset;
+  }
+  .search {
+    width: 93vw;
+    min-width: 280px;
+    margin: 15px;
+    padding-bottom: 10px;
+  }
+  .refresh {
+    display: none;
+  }
+  #search {
+    width: 32.3em;
+  }
+  .atributes_1 {
+    grid-template-columns: auto;
+  }
+  .atributes_2 {
+    grid-template-columns: auto;
+  }
+  .atributes_3 {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+  .sprites {
+    grid-template-columns: auto;
+  }
+  #ty1 {
+    width: min-content;
+  }
+  #st1,
+  #st2,
+  #st3,
+  #st4,
+  #st5,
+  #st6 {
+    margin: 0;
+  }
+  .credits1 {
+    display: none;
+  }
+  .credits2 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    margin-right: 5px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  .credits2 col {
+    flex-direction: column;
+  }
+  .credits2 col {
+    flex-direction: row;
+  }
+  .credits2 h1 {
+    margin-top: 25px;
+    font-size: 12pt;
+  }
+  .credits2 i {
+    margin: 10px 15px;
+    flex-direction: row;
+    font-size: 20pt;
+  }
+  .credits2 a {
+    color: black;
+    flex-direction: row;
+    font-size: 20pt;
+  }
+  .credits2 a:hover {
+    color: #e84443;
   }
 }
