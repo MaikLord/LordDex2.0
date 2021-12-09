@@ -184,6 +184,7 @@ body {
 }
 
 .search input[type="text"] {
+  display: none;
   margin: 15px;
   padding-left: 20px;
   font-style: italic;
