@@ -270,20 +270,22 @@ body {
     all: unset;
   }
   .block {
-    min-width: 100ch;
+    min-width: 93%;
   }
   .search {
     width: max-content;
-    min-width: 100ch;
+    min-width: 100%;
     min-height: 100vh;
     margin: 15px;
     padding-bottom: 10px;
+    padding-top: 10px;
   }
   .refresh {
     display: none;
   }
   #search {
-    width: 32.3em;
+    display: none;
+    width: 250px;
     font-size: 16pt;
   }
   .atributes_1 {
@@ -318,13 +320,13 @@ body {
     background-color: white;
     padding: 15px;
     margin-right: 5px;
-    margin-left: 15px;
+    margin-left: -15px;
     margin-bottom: 20px;
     border-radius: 5px;
     padding-bottom: 5%;
     justify-content: center;
     align-items: center;
-    min-width: 100ch;
+    min-width: 93%;
   }
   .credits2 col {
     flex-direction: column;
