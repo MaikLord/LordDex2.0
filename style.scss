@@ -270,7 +270,7 @@ body {
     all: unset;
   }
   .block {
-    min-width: 94%;
+    min-width: 300px;
   }
   .search {
     width: max-content;
@@ -328,7 +328,7 @@ body {
     padding-bottom: 5%;
     justify-content: center;
     align-items: center;
-    min-width: 92%;
+    min-width: 300px;
   }
   .credits2 col {
     flex-direction: column;
@@ -365,10 +365,10 @@ body {
     min-width: 260px;
   }
   .block {
-    min-width: 94%;
+    min-width: 300px;
   }
   .credits2 {
-    min-width: 92%;
+    min-width: 300px;
   }
 }
 @media only screen and (max-width: 1000px) and (min-width: 250px) {
@@ -385,7 +385,7 @@ body {
     min-width: 92%;
   }
   .block {
-    min-width: 94%;
+    min-width: 300px;
   }
   .search {
     width: 93vw;
@@ -437,6 +437,7 @@ body {
     padding-bottom: 5%;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
   }
   .credits2 col {
     flex-direction: column;
