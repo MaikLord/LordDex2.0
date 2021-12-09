@@ -415,6 +415,7 @@ body {
   .sprites {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+    display: none;
   }
   #ty1 {
     width: -webkit-min-content;
