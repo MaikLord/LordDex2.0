@@ -524,6 +524,10 @@ body {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
+  .search input[type="text"] {
+  display: none;
+
+  }
   .atributes_2 {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
