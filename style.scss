@@ -328,7 +328,7 @@ body {
     padding-bottom: 5%;
     justify-content: center;
     align-items: center;
-    min-width: 94%;
+    min-width: 92%;
   }
   .credits2 col {
     flex-direction: column;
@@ -364,6 +364,12 @@ body {
   .atributes_3 {
     min-width: 260px;
   }
+  .block {
+    min-width: 94%;
+  }
+  .credits2 {
+    min-width: 92%;
+  }
 }
 @media only screen and (max-width: 1000px) and (min-width: 250px) {
   .container {
@@ -374,6 +380,12 @@ body {
   }
   .pokename {
     all: unset;
+  }
+  .credits2 {
+    min-width: 92%;
+  }
+  .block {
+    min-width: 94%;
   }
   .search {
     width: 93vw;
