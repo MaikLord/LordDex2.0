@@ -296,6 +296,7 @@ body {
   }
   .atributes_3 {
     grid-template-columns: minmax(250px, 1fr);
+    min-width: 100%;
   }
   .sprites {
     grid-template-columns: auto;
