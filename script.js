@@ -2,42 +2,51 @@ var Arrays = [];
 
 let buttonValue = document.querySelector(".inputnext");
 
+let pokemonUrl = `https://pokeapi.co/api/v2/pokemon/`;
+
 buttonValue.addEventListener("click", () => {
   buttonValue.dataset.value++;
   fetchPokemon();
 });
 var pokemonimg = buttonValue.dataset.value;
 
-const fetchPokemon = () => {
-  const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${buttonValue.dataset.value}`;
+const fetchPokemon = (name) => {
+  const pokeName = document.getElementById("name");
+  const pokeID = document.getElementById("pokemonid");
+  const pokeType = document.getElementById("ty1");
+  const pokeAbility1 = document.getElementById("ab1");
+  const pokeAbility2 = document.getElementById("ab2");
+  const pokeStatus1 = document.getElementById("st1");
+  const pokeStatus2 = document.getElementById("st2");
+  const pokeStatus3 = document.getElementById("st3");
+  const pokeStatus4 = document.getElementById("st4");
+  const pokeStatus5 = document.getElementById("st5");
+  const pokeStatus6 = document.getElementById("st6");
+  const pokeSprint1 = document.getElementById("sp1");
+  const pokeSprint2 = document.getElementById("sp2");
+  const pokeSprint3 = document.getElementById("sp3");
+  const pokeSprint4 = document.getElementById("sp4");
 
-  fetch(pokemonUrl)
+  let param = name || buttonValue.dataset.value;
+  fetch(pokemonUrl + param)
     .then((response) => response.json())
     .then((pokemon) => {
-      document.getElementById("name").innerHTML = pokemon.name.toUpperCase();
-      document.getElementById("pokemonid").innerHTML = pokemon.id;
-      document.getElementById("ty1").innerHTML =
-        pokemon.types[0].type.name.toUpperCase();
-      document.getElementById("ab1").innerHTML =
-        pokemon.moves[0].move.name.toUpperCase();
-      document.getElementById("ab2").innerHTML =
-        pokemon.moves[1].move.name.toUpperCase();
-      document.getElementById("st1").innerHTML = pokemon.stats[0].base_stat;
-      document.getElementById("st2").innerHTML = pokemon.stats[1].base_stat;
-      document.getElementById("st3").innerHTML = pokemon.stats[2].base_stat;
-      document.getElementById("st4").innerHTML = pokemon.stats[3].base_stat;
-      document.getElementById("st5").innerHTML = pokemon.stats[4].base_stat;
-      document.getElementById("st6").innerHTML = pokemon.stats[5].base_stat;
-      document.getElementById("sp1").src = pokemon.sprites.front_default;
-      document.getElementById("sp2").src = pokemon.sprites.back_default;
-      document.getElementById("sp3").src = pokemon.sprites.front_shiny;
-      document.getElementById("sp4").src = pokemon.sprites.back_shiny;
-
-      function pokemonNames() {
-        fetch(pokemonUrl).then(function (res) {
-          return res.name;
-        });
-      }
+      document.getElementById("poke1").src = getImage(pokemon.id);
+      pokeName.innerHTML = pokemon.name.toUpperCase();
+      pokeID.innerHTML = pokemon.id;
+      pokeType.innerHTML = pokemon.types[0].type.name.toUpperCase();
+      pokeAbility1.innerHTML = pokemon.moves[0].move.name.toUpperCase();
+      pokeAbility2.innerHTML = pokemon.moves[1].move.name.toUpperCase();
+      pokeStatus1.innerHTML = pokemon.stats[0].base_stat;
+      pokeStatus2.innerHTML = pokemon.stats[1].base_stat;
+      pokeStatus3.innerHTML = pokemon.stats[2].base_stat;
+      pokeStatus4.innerHTML = pokemon.stats[3].base_stat;
+      pokeStatus5.innerHTML = pokemon.stats[4].base_stat;
+      pokeStatus6.innerHTML = pokemon.stats[5].base_stat;
+      pokeSprint1.src = pokemon.sprites.front_default;
+      pokeSprint2.src = pokemon.sprites.back_default;
+      pokeSprint3.src = pokemon.sprites.front_shiny;
+      pokeSprint4.src = pokemon.sprites.back_shiny;
 
       const HP = document.getElementById("st1").innerHTML;
       const ATK = document.getElementById("st2").innerHTML;
@@ -214,30 +223,17 @@ const fetchPokemon = () => {
 };
 fetchPokemon();
 
-const url = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
-
-for (var i = 1; i <= 898; i++) {
-  var id = "00" + i;
-  Arrays.push(url + id.substring(id.length, id.length - 3) + ".png");
-}
 /* Function modified */
 function next() {
-  if (pokemonimg == Arrays.length) {
-    pokemonimg = 0;
-  }
-  document.getElementById("poke1").src = Arrays[pokemonimg];
-  pokemonimg++;
-  let pokemon = getPokemons().filter((item) => {
-    return item.img + 1 === pokemonimg;
-  })[0];
+  fetchPokemon();
+}
+function getImage(id) {
+  const url = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
+
+  const idStr = String(id).padStart(3, "0");
+  return url + idStr + ".png";
 }
 /* funtion called in search input on index.html */
-function search(text) {
-  let pokemon = getPokemons().filter((item) => {
-    return item.name.toLowerCase().indexOf(text.toLowerCase()) === 0;
-  })[0];
-}
-/* List of pokemons */
-function getPokemons() {
-  return [Array.from(Array(898).keys())];
+async function search(text) {
+  fetchPokemon(text);
 }

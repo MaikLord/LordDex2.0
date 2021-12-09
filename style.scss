@@ -16,6 +16,12 @@
 body {
   background-image: url(./img/25th_gray-8cafe8de4009ac8136df20fdf02bee2a.gif);
 }
+.background {
+  display: flex;
+  height: 100vh;
+  border-radius: 5px;
+  background-color: rgba(65, 65, 65, 0.5);
+}
 .pokename {
   display: flex;
   width: 40%;
@@ -57,14 +63,6 @@ body {
 .credits a:hover {
   color: #e84443;
 }
-.background {
-  display: flex;
-  width: auto;
-  height: 100vh;
-  border-radius: 5px;
-  background-color: rgba(65, 65, 65, 0.5);
-}
-
 .block {
   width: 95%;
   margin: 15px;
@@ -251,4 +249,12 @@ body {
   justify-content: center;
   text-align: center;
   grid-template-columns: auto auto;
+}
+@media only screen and (max-width: 600px) {
+  .background {
+    width: 100vw;
+  }
+  .pokename {
+    width: 100vw;
+  }
 }

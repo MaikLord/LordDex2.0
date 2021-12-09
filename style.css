@@ -17,6 +17,15 @@ body {
   background-image: url(./img/25th_gray-8cafe8de4009ac8136df20fdf02bee2a.gif);
 }
 
+.background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  border-radius: 5px;
+  background-color: rgba(65, 65, 65, 0.5);
+}
+
 .pokename {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,16 +101,6 @@ body {
 
 .credits a:hover {
   color: #e84443;
-}
-
-.background {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: auto;
-  height: 100vh;
-  border-radius: 5px;
-  background-color: rgba(65, 65, 65, 0.5);
 }
 
 .block {
@@ -353,5 +352,14 @@ body {
   text-align: center;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .background {
+    width: 100vw;
+  }
+  .pokename {
+    width: 100vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
