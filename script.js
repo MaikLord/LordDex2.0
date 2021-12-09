@@ -208,7 +208,7 @@ const fetchPokemon = (name) => {
     });
 };
 fetchPokemon();
-/* Function modified */
+
 function next() {
   fetchPokemon();
 }
@@ -218,7 +218,6 @@ function getImage(id) {
   const idStr = String(id).padStart(3, "0");
   return url + idStr + ".png";
 }
-/* funtion called in search input on index.html */
 async function search(text) {
   fetchPokemon(text);
 }

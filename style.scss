@@ -353,6 +353,9 @@ body {
   .credits2 a:hover {
     color: #e84443;
   }
+  .sprites {
+    display: none;
+  }
 }
 @media only screen and (max-width: 980px) {
   .refresh {
@@ -445,5 +448,8 @@ body {
   }
   .credits2 a:hover {
     color: #e84443;
+  }
+  .sprites {
+    display: none;
   }
 }
