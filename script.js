@@ -26,3 +26,6 @@ function getImage(id) {
 async function search(text) {
   fetchPokemon(text);
 }
+if (caracterCode == 13) {
+  search(this.value);
+}
