@@ -59,24 +59,24 @@ const fetchPokemon = (name) => {
       const image17 = document.createElement("img");
       const image18 = document.createElement("img");
 
-      image1.src = "./img/120px-Pokémon_Fire_Type_Icon.svg.png";
-      image2.src = "./img/120px-Pokémon_Water_Type_Icon.svg.png";
-      image3.src = "./img/120px-Pokémon_Bug_Type_Icon.svg.png";
-      image4.src = "./img/120px-Pokémon_Dark_Type_Icon.svg.png";
-      image5.src = "./img/120px-Pokémon_Dragon_Type_Icon.svg.png";
-      image6.src = "./img/120px-Pokémon_Electric_Type_Icon.svg.png";
-      image7.src = "./img/120px-Pokémon_Fairy_Type_Icon.svg.png";
-      image8.src = "./img/120px-Pokémon_Fighting_Type_Icon.svg.png";
-      image9.src = "./img/120px-Pokémon_Flying_Type_Icon.svg.png";
-      image10.src = "./img/120px-Pokémon_Ghost_Type_Icon.svg.png";
-      image11.src = "./img/120px-Pokémon_Grass_Type_Icon.svg.png";
-      image12.src = "./img/120px-Pokémon_Ground_Type_Icon.svg.png";
-      image13.src = "./img/120px-Pokémon_Ice_Type_Icon.svg.png";
-      image14.src = "./img/120px-Pokémon_Normal_Type_Icon.svg.png";
-      image15.src = "./img/120px-Pokémon_Poison_Type_Icon.svg.png";
-      image16.src = "./img/120px-Pokémon_Psychic_Type_Icon.svg.png";
-      image17.src = "./img/120px-Pokémon_Rock_Type_Icon.svg.png";
-      image18.src = "./img/120px-Pokémon_Steel_Type_Icon.svg.png";
+      image1.src = "./img/Fire.png";
+      image2.src = "./img/Water.png";
+      image3.src = "./img/Bug.png";
+      image4.src = "./img/Dark.png";
+      image5.src = "./img/Dragon.png";
+      image6.src = "./img/Electric.png";
+      image7.src = "./img/Fairy.png";
+      image8.src = "./img/Fighting.png";
+      image9.src = "./img/Flying.png";
+      image10.src = "./img/Ghost.png";
+      image11.src = "./img/Grass.png";
+      image12.src = "./img/Ground.png";
+      image13.src = "./img/Ice.png";
+      image14.src = "./img/Normal.png";
+      image15.src = "./img/Poison.png";
+      image16.src = "./img/Psychic.png";
+      image17.src = "./img/Rock.png";
+      image18.src = "./img/Steel.png";
 
       const typeOf = document.getElementById("typeOf");
 
