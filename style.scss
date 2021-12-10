@@ -30,10 +30,14 @@ body {
   }
   .background {
     grid-template-columns: 1fr;
+    margin: 0;
   }
   .search {
     all: unset;
     margin-top: 15px;
+  }
+  .pokeid {
+    margin-top: 0;
   }
 }
 .pokename {
@@ -209,7 +213,7 @@ body {
   #pM {
     background-color: $red;
     margin: 10px 0 0 0;
-    font-size: 14pt;
+    font-size: 12pt;
     border-radius: 5px;
     font-weight: 400;
     padding: 10px 0;
@@ -219,7 +223,7 @@ body {
   #ab2 {
     background-color: $gray;
     margin-top: 10px;
-    font-size: 14pt;
+    font-size: 12pt;
     border-radius: 5px;
     padding: 10px 0;
     color: $white;
