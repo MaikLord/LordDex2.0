@@ -24,6 +24,9 @@ body {
   border-radius: 5px;
 }
 @media only screen and (max-width: 800px) {
+  * {
+    margin: 0;
+  }
   body {
     all: unset;
     background-image: url(./img/25th_gray-8cafe8de4009ac8136df20fdf02bee2a.gif);
