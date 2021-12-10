@@ -58,7 +58,6 @@ const fetchPokemon = (name) => {
       const image16 = document.createElement("img");
       const image17 = document.createElement("img");
       const image18 = document.createElement("img");
-      const image19 = document.createElement("img");
 
       image1.src = "./img/120px-Pokémon_Fire_Type_Icon.svg.png";
       image2.src = "./img/120px-Pokémon_Water_Type_Icon.svg.png";
@@ -75,9 +74,9 @@ const fetchPokemon = (name) => {
       image13.src = "./img/120px-Pokémon_Ice_Type_Icon.svg.png";
       image14.src = "./img/120px-Pokémon_Normal_Type_Icon.svg.png";
       image15.src = "./img/120px-Pokémon_Poison_Type_Icon.svg.png";
+      image16.src = "./img/120px-Pokémon_psychic_Type_Icon.svg.png";
       image17.src = "./img/120px-Pokémon_Rock_Type_Icon.svg.png";
       image18.src = "./img/120px-Pokémon_Steel_Type_Icon.svg.png";
-      image19.src = "./img/120px-Pokémon_psychic_Type_Icon.svg.png";
 
       const typeOf = document.getElementById("typeOf");
 
@@ -158,7 +157,7 @@ const fetchPokemon = (name) => {
         pokeType.style.backgroundColor = "#B667CF";
       }
       if (pokemon.types[0].type.name == "psychic") {
-        document.getElementById("typeOfIcon").src = image19.src;
+        document.getElementById("typeOfIcon").src = image16.src;
         typeOf.style.backgroundColor = "#FF6676";
         pokeType.style.backgroundColor = "#FF6676";
       }
