@@ -201,6 +201,7 @@ body {
   padding: 10px 0 10px 20px;
   border-radius: 5px;
   border: none;
+  text-transform: lowercase;
 }
 
 .search input[type="button"] {
