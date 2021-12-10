@@ -19,6 +19,7 @@ body {
 .background {
   display: flex;
   height: 100vh;
+  min-width: 100vw;
   border-radius: 5px;
   background-color: rgba(65, 65, 65, 0.5);
 }
@@ -32,11 +33,12 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 15px;
+  padding: 0 5px;
   margin-right: 5px;
+  margin-top: 20%;
+  margin-bottom: 20%;
   margin-left: 15px;
   border-radius: 5px;
-  padding-bottom: 7.1%;
   justify-content: center;
   align-items: center;
 }
@@ -64,13 +66,13 @@ body {
   font-size: 20pt;
 }
 .credits1 a:hover {
-  color: #e84443;
+  color: #e71d1d;
 }
 .block {
   width: 95%;
-  margin: 15px;
-  margin-top: 180px;
-  height: fit-content;
+  margin: 0px 15px;
+  margin-top: 36px;
+  height: 100%;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: #202020;
@@ -80,7 +82,7 @@ body {
   justify-self: center;
   align-self: center;
   margin: 0 auto;
-  margin-top: -120px;
+  margin-top: -22%;
   -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.5));
   filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.5));
 }
@@ -94,7 +96,8 @@ body {
 .pokeid {
   display: flex;
   float: right;
-  margin-top: -2%;
+  margin-top: -5%;
+  border: 1px solid #fff;
   margin-left: -100px;
   border-radius: 5px;
   padding: 15px;
@@ -155,6 +158,12 @@ body {
   display: flex;
   justify-content: center;
 }
+.next1 input:hover {
+  background-color: #101010;
+}
+.next1 input:active {
+  background-color: #e84443;
+}
 .next1 input {
   padding: 25px 100px;
   margin: 15px;
@@ -188,6 +197,7 @@ body {
 }
 .atributes_3 {
   display: grid;
+  width: 95%;
   grid-template-columns: auto auto;
   background-color: #e84443;
   padding: 15px;
@@ -196,12 +206,31 @@ body {
   align-items: center;
   min-width: 280px;
 }
+#typeOfIcon {
+  width: 50px;
+  height: 50px;
+  margin-top: -5%;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.typeOf {
+  background-color: #606060;
+  justify-content: space-evenly;
+  width: 95%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  min-width: min-content;
+}
 #pT {
   padding: 15px;
   margin: 10px 20px 10px 0;
   border-radius: 5px;
   background-color: #e84443;
   font-weight: 600;
+  min-width: min-content;
 }
 #pM {
   padding: 15px;
@@ -211,6 +240,7 @@ body {
   font-weight: 600;
   justify-content: center;
   text-align: center;
+  min-width: min-content;
 }
 #ab1,
 #ab2 {
@@ -237,12 +267,10 @@ body {
   min-width: max-content;
 }
 #ty1 {
-  display: flex;
   color: white;
   background-color: #606060;
   padding: 15px;
   border-radius: 5px;
-  justify-content: center;
 }
 .status_sprites {
   display: grid;
@@ -270,7 +298,14 @@ body {
     all: unset;
   }
   .block {
+    margin-top: 80px;
     min-width: 300px;
+  }
+  #pT {
+    min-width: min-content;
+  }
+  #pM {
+    min-width: min-content;
   }
   .search {
     width: max-content;
@@ -288,6 +323,11 @@ body {
     width: 250px;
     font-size: 16pt;
   }
+  .atributes {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 5px;
+  }
   .atributes_1 {
     grid-template-columns: auto;
   }
@@ -295,8 +335,10 @@ body {
     grid-template-columns: auto;
   }
   .atributes_3 {
-    grid-template-columns: minmax(180px, 1fr);
-    min-width: 100%;
+    width: 380px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   .sprites {
     grid-template-columns: auto;
@@ -340,6 +382,9 @@ body {
     margin-top: 25px;
     font-size: 12pt;
   }
+  #ab1 {
+    margin: 0px 20px 2px 0;
+  }
   .credits2 i {
     margin: 10px 15px;
     flex-direction: row;
@@ -361,17 +406,8 @@ body {
   .refresh {
     display: none;
   }
-  .atributes_3 {
-    min-width: 260px;
-  }
-  .block {
-    min-width: 300px;
-  }
-  .credits2 {
-    min-width: 300px;
-  }
 }
-@media only screen and (max-width: 1000px) and (min-width: 250px) {
+@media only screen and (max-width: 850px) and (min-width: 250px) {
   .container {
     all: unset;
   }
@@ -385,7 +421,8 @@ body {
     min-width: 92%;
   }
   .block {
-    min-width: 300px;
+    min-width: 30ch;
+    margin-top: 120px;
   }
   .search {
     width: 93vw;

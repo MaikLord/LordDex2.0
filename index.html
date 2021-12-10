@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LordDex 2.0 - Pókedex</title>
+    <title>LordDex 2.0 - Honker™</title>
+    <link
+      rel="shortcut icon"
+      href="./img/pokeball_white.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <!-- Container with all important to run -->
-    <div class="container" role="container">
+    <main class="container" role="container">
       <div class="background">
         <div class="pokename">
           <!-- Pókemon Image -->
@@ -19,6 +24,10 @@
             <div class="pokeid" id="pokeid">
               <h1 id="pokemonid">1</h1>
             </div>
+            <img
+              id="typeOfIcon"
+              src="./img/120px-Pokémon_Grass_Type_Icon.svg.png"
+            />
             <!-- Refresh page Area -->
             <img
               id="poke1"
@@ -33,7 +42,7 @@
             <div class="button">
               <div class="next1">
                 <input
-                  onclick="next()"
+                  onclick="next();changeIcon()"
                   class="inputnext"
                   type="button"
                   id="inputnext"
@@ -79,7 +88,9 @@
           <div class="atributes">
             <div class="atributes_1">
               <h1 id="pT">Principal Type</h1>
-              <p id="ty1">GRASS</p>
+              <div class="typeOf">
+                <p id="ty1">GRASS</p>
+              </div>
             </div>
             <div class="atributes_2">
               <h1 id="pM">Principal Moves</h1>
@@ -90,17 +101,17 @@
               <div class="atributes_3">
                 <h1>Base Status</h1>
                 <h1> </h1>
-                <h1>HP</h1>
+                <h1 id="HP">HP</h1>
                 <p class="sts" id="st1"></p>
-                <h1>ATK</h1>
+                <h1 id="ATK">ATK</h1>
                 <p class="sts" id="st2"></p>
-                <h1>DEF</h1>
+                <h1 id="DEF">DEF</h1>
                 <p class="sts" id="st3"></p>
-                <h1>SPATK</h1>
+                <h1 id="SPA">SPATK</h1>
                 <p class="sts" id="st4"></p>
-                <h1>SPDEF</h1>
+                <h1 id="SPD">SPDEF</h1>
                 <p class="sts" id="st5"></p>
-                <h1>SPD</h1>
+                <h1 id="Speed">SPD</h1>
                 <p class="sts" id="st6"></p>
               </div>
               <div class="sprites">
@@ -127,8 +138,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <script src="script.js"></script>
+    <script src="api.js"></script>
     <script
       src="https://kit.fontawesome.com/d1de80c18d.js"
       crossorigin="anonymous"
