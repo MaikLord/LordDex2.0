@@ -36,6 +36,8 @@ const fetchPokemon = (name) => {
       pokeSprint1.src = pokemon.sprites.front_default;
       pokeSprint3.src = pokemon.sprites.front_shiny;
 
+      console.log(pokemon);
+
       // Conditionals  Pokemon Icon Type//
 
       const image1 = document.createElement("img");
@@ -56,6 +58,7 @@ const fetchPokemon = (name) => {
       const image16 = document.createElement("img");
       const image17 = document.createElement("img");
       const image18 = document.createElement("img");
+      const image19 = document.createElement("img");
 
       image1.src = "./img/120px-Pokémon_Fire_Type_Icon.svg.png";
       image2.src = "./img/120px-Pokémon_Water_Type_Icon.svg.png";
@@ -74,60 +77,100 @@ const fetchPokemon = (name) => {
       image15.src = "./img/120px-Pokémon_Poison_Type_Icon.svg.png";
       image17.src = "./img/120px-Pokémon_Rock_Type_Icon.svg.png";
       image18.src = "./img/120px-Pokémon_Steel_Type_Icon.svg.png";
+      image19.src = "./img/120px-Pokémon_psychic_Type_Icon.svg.png";
+
+      const typeOf = document.getElementById("typeOf");
 
       if (pokemon.types[0].type.name == "fire") {
         document.getElementById("typeOfIcon").src = image1.src;
+        typeOf.style.backgroundColor = "#FF983F";
+        pokeType.style.backgroundColor = "#FF983F";
+        // pokeType.style.color = "#FFF";
       }
       if (pokemon.types[0].type.name == "water") {
         document.getElementById("typeOfIcon").src = image2.src;
+        typeOf.style.backgroundColor = "#3393DD";
+        pokeType.style.backgroundColor = "#3393DD";
       }
       if (pokemon.types[0].type.name == "bug") {
         document.getElementById("typeOfIcon").src = image3.src;
+        typeOf.style.backgroundColor = "#84C400";
+        pokeType.style.backgroundColor = "#84C400";
       }
       if (pokemon.types[0].type.name == "dark") {
         document.getElementById("typeOfIcon").src = image4.src;
+        typeOf.style.backgroundColor = "#5B5366";
+        pokeType.style.backgroundColor = "#5B5366";
       }
       if (pokemon.types[0].type.name == "dragon") {
         document.getElementById("typeOfIcon").src = image5.src;
+        typeOf.style.backgroundColor = "#0070CA";
+        pokeType.style.backgroundColor = "#0070CA";
       }
       if (pokemon.types[0].type.name == "electric") {
         document.getElementById("typeOfIcon").src = image6.src;
+        typeOf.style.backgroundColor = "#FBD200";
+        pokeType.style.backgroundColor = "#FBD200";
       }
       if (pokemon.types[0].type.name == "fairy") {
         document.getElementById("typeOfIcon").src = image7.src;
+        typeOf.style.backgroundColor = "#FB8AEC";
+        pokeType.style.backgroundColor = "#FB8AEC";
       }
       if (pokemon.types[0].type.name == "fighting") {
         document.getElementById("typeOfIcon").src = image8.src;
+        typeOf.style.backgroundColor = "#E12C6A";
+        pokeType.style.backgroundColor = "#E12C6A";
       }
       if (pokemon.types[0].type.name == "flying") {
         document.getElementById("typeOfIcon").src = image9.src;
+        typeOf.style.backgroundColor = "#8AABE4";
+        pokeType.style.backgroundColor = "#8AABE4";
       }
       if (pokemon.types[0].type.name == "ghost") {
         document.getElementById("typeOfIcon").src = image10.src;
+        typeOf.style.backgroundColor = "#4B6AB3";
+        pokeType.style.backgroundColor = "#4B6AB3";
       }
       if (pokemon.types[0].type.name == "grass") {
         document.getElementById("typeOfIcon").src = image11.src;
+        typeOf.style.backgroundColor = "#35C04A";
+        pokeType.style.backgroundColor = "#35C04A";
       }
       if (pokemon.types[0].type.name == "ground") {
         document.getElementById("typeOfIcon").src = image12.src;
+        typeOf.style.backgroundColor = "#E97333";
+        pokeType.style.backgroundColor = "#E97333";
       }
       if (pokemon.types[0].type.name == "ice") {
         document.getElementById("typeOfIcon").src = image13.src;
+        typeOf.style.backgroundColor = "#4BD2C1";
+        pokeType.style.backgroundColor = "#4BD2C1";
       }
       if (pokemon.types[0].type.name == "normal") {
         document.getElementById("typeOfIcon").src = image14.src;
+        typeOf.style.backgroundColor = "#929BA3";
+        pokeType.style.backgroundColor = "#929BA3";
       }
       if (pokemon.types[0].type.name == "poison") {
         document.getElementById("typeOfIcon").src = image15.src;
+        typeOf.style.backgroundColor = "#B667CF";
+        pokeType.style.backgroundColor = "#B667CF";
       }
       if (pokemon.types[0].type.name == "psychic") {
-        document.getElementById("typeOfIcon").src = image16.src;
+        document.getElementById("typeOfIcon").src = image19.src;
+        typeOf.style.backgroundColor = "#FF6676";
+        pokeType.style.backgroundColor = "#FF6676";
       }
       if (pokemon.types[0].type.name == "rock") {
         document.getElementById("typeOfIcon").src = image17.src;
+        typeOf.style.backgroundColor = "#C9B787";
+        pokeType.style.backgroundColor = "#C9B787";
       }
       if (pokemon.types[0].type.name == "steel") {
         document.getElementById("typeOfIcon").src = image18.src;
+        typeOf.style.backgroundColor = "#598FA3";
+        pokeType.style.backgroundColor = "#598FA3";
       }
 
       // Conditionals Status Base Bar //
@@ -147,7 +190,7 @@ const fetchPokemon = (name) => {
           document.getElementById("st1").style.transition = "0.5s";
           document.getElementById("st1").style.color = "white";
           document.getElementById("st1").style.width = "60%";
-          document.getElementById("HP").innerHTML = "HP   " + `${down}`;
+          document.getElementById("HP").innerHTML = "HP   " + `${down}`;
         default:
           switch (true) {
             case HP >= 41 && HP <= 104:
@@ -164,7 +207,7 @@ const fetchPokemon = (name) => {
                   document.getElementById("st1").style.transition = "0.5s";
                   document.getElementById("st1").style.color = "#FFF";
                   document.getElementById("st1").style.width = "100%";
-                  document.getElementById("HP").innerHTML = "HP   " + `${up}`;
+                  document.getElementById("HP").innerHTML = "HP   " + `${up}`;
 
                 default:
               }
@@ -177,7 +220,7 @@ const fetchPokemon = (name) => {
           document.getElementById("st2").style.transition = "0.5s";
           document.getElementById("st2").style.color = "white";
           document.getElementById("st2").style.width = "60%";
-          document.getElementById("ATK").innerHTML = "ATK   " + `${down}`;
+          document.getElementById("ATK").innerHTML = "ATK   " + `${down}`;
 
         default:
           switch (true) {
@@ -195,7 +238,7 @@ const fetchPokemon = (name) => {
                   document.getElementById("st2").style.transition = "0.5s";
                   document.getElementById("st2").style.color = "#FFF";
                   document.getElementById("st2").style.width = "100%";
-                  document.getElementById("ATK").innerHTML = "ATK   " + `${up}`;
+                  document.getElementById("ATK").innerHTML = "ATK   " + `${up}`;
 
                 default:
               }
@@ -207,7 +250,7 @@ const fetchPokemon = (name) => {
           document.getElementById("st3").style.transition = "0.5s";
           document.getElementById("st3").style.color = "white";
           document.getElementById("st3").style.width = "60%";
-          document.getElementById("DEF").innerHTML = "DEF   " + `${down}`;
+          document.getElementById("DEF").innerHTML = "DEF   " + `${down}`;
         default:
           switch (true) {
             case DEF >= 41 && DEF <= 80:
@@ -225,7 +268,7 @@ const fetchPokemon = (name) => {
                   document.getElementById("st3").style.transition = "0.5s";
                   document.getElementById("st3").style.color = "#FFF";
                   document.getElementById("st3").style.width = "100%";
-                  document.getElementById("DEF").innerHTML = "DEF   " + `${up}`;
+                  document.getElementById("DEF").innerHTML = "DEF   " + `${up}`;
 
                 default:
               }
@@ -237,7 +280,7 @@ const fetchPokemon = (name) => {
           document.getElementById("st4").style.transition = "0.5s";
           document.getElementById("st4").style.color = "white";
           document.getElementById("st4").style.width = "60%";
-          document.getElementById("SPA").innerHTML = "SPATK   " + `${down}`;
+          document.getElementById("SPA").innerHTML = "SPATK   " + `${down}`;
         default:
           switch (true) {
             case SPA >= 41 && SPA <= 80:
@@ -256,7 +299,7 @@ const fetchPokemon = (name) => {
                   document.getElementById("st4").style.color = "#FFF";
                   document.getElementById("st4").style.width = "100%";
                   document.getElementById("SPA").innerHTML =
-                    "SPATK   " + `${up}`;
+                    "SPATK   " + `${up}`;
 
                 default:
               }
@@ -268,7 +311,7 @@ const fetchPokemon = (name) => {
           document.getElementById("st5").style.transition = "0.5s";
           document.getElementById("st5").style.color = "white";
           document.getElementById("st5").style.width = "60%";
-          document.getElementById("SPD").innerHTML = "SPDEF   " + `${down}`;
+          document.getElementById("SPD").innerHTML = "SPDEF   " + `${down}`;
 
         default:
           switch (true) {
@@ -288,7 +331,7 @@ const fetchPokemon = (name) => {
                   document.getElementById("st5").style.color = "#FFF";
                   document.getElementById("st5").style.width = "100%";
                   document.getElementById("SPD").innerHTML =
-                    "SPDEF   " + `${up}`;
+                    "SPDEF   " + `${up}`;
 
                 default:
               }
@@ -300,7 +343,7 @@ const fetchPokemon = (name) => {
           document.getElementById("st6").style.transition = "0.5s";
           document.getElementById("st6").style.color = "white";
           document.getElementById("st6").style.width = "60%";
-          document.getElementById("Speed").innerHTML = "SPD   " + `${down}`;
+          document.getElementById("Speed").innerHTML = "SPD   " + `${down}`;
 
         default:
           switch (true) {
@@ -320,7 +363,7 @@ const fetchPokemon = (name) => {
                   document.getElementById("st6").style.color = "#FFF";
                   document.getElementById("st6").style.width = "100%";
                   document.getElementById("Speed").innerHTML =
-                    "SPD   " + `${up}`;
+                    "SPD   " + `${up}`;
 
                 default:
               }

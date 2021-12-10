@@ -69,9 +69,8 @@ body {
   color: #e71d1d;
 }
 .block {
-  width: 95%;
-  margin: 0px 15px;
-  margin-top: 36px;
+  width: 96%;
+  margin: 25px 15px;
   height: 100%;
   border-radius: 5px;
   background-color: #fff;
@@ -82,7 +81,6 @@ body {
   justify-self: center;
   align-self: center;
   margin: 0 auto;
-  margin-top: -22%;
   -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.5));
   filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.5));
 }
@@ -96,7 +94,7 @@ body {
 .pokeid {
   display: flex;
   float: right;
-  margin-top: -5%;
+  margin-top: -2%;
   border: 1px solid #fff;
   margin-left: -100px;
   border-radius: 5px;
@@ -155,16 +153,46 @@ body {
   background-color: #c4c4c4;
 }
 .next1 {
-  display: flex;
+  display: block;
   justify-content: center;
+  text-align: center;
+}
+.col {
+  margin: 15px;
+  padding: 15px;
+  color: #202020;
+  font-weight: bolder;
+}
+.col i {
+  gap: 20px;
+  font-size: 25pt;
+  margin: 10px 20px;
+}
+.col a {
+  color: #202020;
+}
+.col a:hover {
+  color: #dd1c1c;
 }
 .next1 input:hover {
+  padding: 25px 100px;
+  margin: 15px;
+  margin-top: 2em;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #202020;
+  color: white;
+  font-size: 14pt;
+  font-weight: 400;
+  justify-content: center;
   background-color: #101010;
 }
 .next1 input:active {
   background-color: #e84443;
 }
-.next1 input {
+.inputnext {
   padding: 25px 100px;
   margin: 15px;
   margin-top: 2em;
@@ -268,6 +296,7 @@ body {
 }
 #ty1 {
   color: white;
+  font-weight: bolder;
   background-color: #606060;
   padding: 15px;
   border-radius: 5px;
@@ -298,7 +327,6 @@ body {
     all: unset;
   }
   .block {
-    margin-top: 80px;
     min-width: 300px;
   }
   #pT {
@@ -324,8 +352,6 @@ body {
     font-size: 16pt;
   }
   .atributes {
-    justify-content: center !important;
-    align-items: center !important;
     margin-top: 5px;
   }
   .atributes_1 {
@@ -336,9 +362,6 @@ body {
   }
   .atributes_3 {
     width: 380px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
   }
   .sprites {
     grid-template-columns: auto;
@@ -420,9 +443,11 @@ body {
   .credits2 {
     min-width: 92%;
   }
-  .block {
-    min-width: 30ch;
-    margin-top: 120px;
+  .col {
+    display: none;
+  }
+  .row {
+    display: none;
   }
   .search {
     width: 93vw;
