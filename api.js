@@ -74,7 +74,7 @@ const fetchPokemon = (name) => {
       image13.src = "./img/120px-Pokémon_Ice_Type_Icon.svg.png";
       image14.src = "./img/120px-Pokémon_Normal_Type_Icon.svg.png";
       image15.src = "./img/120px-Pokémon_Poison_Type_Icon.svg.png";
-      image16.src = "./img/120px-Pokémon_psychic_Type_Icon.svg.png";
+      image16.src = "./img/120px-Pokémon_Psychic_Type_Icon.svg.png";
       image17.src = "./img/120px-Pokémon_Rock_Type_Icon.svg.png";
       image18.src = "./img/120px-Pokémon_Steel_Type_Icon.svg.png";
 
