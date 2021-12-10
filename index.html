@@ -14,28 +14,25 @@
   </head>
 
   <body>
-    <!-- Container with all important to run -->
     <main class="container" role="container">
       <div class="background">
         <div class="pokename">
-          <!-- Pókemon Image -->
           <div class="block">
-            <!-- Pókemon ID Display -->
             <div class="pokeid" id="pokeid">
               <h1 id="pokemonid">1</h1>
             </div>
-            <img id="typeOfIcon" src="./img/Grass.png" />
-            <!-- Refresh page Area -->
             <img
               id="poke1"
               class="poke1"
               src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
             />
-            <!-- Pókemon Name -->
             <div class="name">
-              <p id="name">Bulbasaur</p>
+              <p id="name" class="name">Bulbasaur</p>
+              <div id="type" class="type">
+                <p class="ty1" id="ty1">GRASS</p>
+                <img id="typeOfIcon" src="./img/Grass.png" />
+              </div>
             </div>
-            <!-- Next Button -->
             <div class="button">
               <div class="next1">
                 <input
@@ -66,72 +63,66 @@
             </div>
           </div>
         </div>
-        <!-- Search Box -->
         <div class="search">
-          <input
-            type="text"
-            id="search"
-            placeholder="Search Pokemon..."
-            onkeyup="search(this.value)"
-            onblur="search(this.value)"
-          />
-          <input
-            class="refresh"
-            id="refresh"
-            type="button"
-            value="Refresh Page"
-            onclick="window.location.href=window.location.href"
-          />
-          <div class="atributes">
-            <div class="atributes_1">
-              <h1 id="pT">Principal Type</h1>
-              <div id="typeOf" class="typeOf">
-                <p id="ty1">GRASS</p>
-              </div>
-            </div>
-            <div class="atributes_2">
-              <h1 id="pM">Principal Moves</h1>
-              <p id="ab1" title="Move 1"></p>
-              <p id="ab2" title="Move 2"></p>
-            </div>
-            <div class="status_sprites">
-              <div class="atributes_3">
-                <h1>Base Status</h1>
-                <h1> </h1>
-                <h1 id="HP">HP</h1>
+          <div class="search_reload">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search with Pókemon name or ID..."
+              onkeyup="search(this.value)"
+              onfocusout="search(this.value)"
+            />
+            <input
+              class="refresh"
+              id="refresh"
+              type="button"
+              value="Refresh Page"
+              onclick="window.location.href=window.location.href"
+            />
+          </div>
+          <div class="atributes_2">
+            <h1 id="pM">Principal Moves</h1>
+            <p id="ab1" title="Move 1"></p>
+            <p id="ab2" title="Move 2"></p>
+          </div>
+          <div class="status_sprites">
+            <div class="atributes_3">
+              <h1 class="baseh1">Base Status</h1>
+              <h1 id="HP">HP</h1>
+              <div class="st1">
                 <p class="sts" id="st1"></p>
-                <h1 id="ATK">ATK</h1>
+              </div>
+              <h1 id="ATK">ATK</h1>
+              <div class="st2">
                 <p class="sts" id="st2"></p>
-                <h1 id="DEF">DEF</h1>
+              </div>
+              <h1 id="DEF">DEF</h1>
+              <div class="st3">
                 <p class="sts" id="st3"></p>
-                <h1 id="SPA">SPATK</h1>
+              </div>
+              <h1 id="SPA">SPATK</h1>
+              <div class="st4">
                 <p class="sts" id="st4"></p>
-                <h1 id="SPD">SPDEF</h1>
+              </div>
+              <h1 id="SPD">SPDEF</h1>
+              <div class="st5">
                 <p class="sts" id="st5"></p>
-                <h1 id="Speed">SPD</h1>
+              </div>
+              <h1 id="Speed">SPD</h1>
+              <div class="st6">
                 <p class="sts" id="st6"></p>
               </div>
-              <div class="sprites">
-                <img id="sp1" title="Normal" />
-                <img id="sp3" title="Shiny" />
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="credits2">
-          <div class="col">
-            <h1>Lucas José</h1>
-          </div>
-          <div class="row">
-            <a href="https://github.com/MaikLord" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/lucas-js2/" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="https://www.behance.net/maiklord" target="_blank"
-              ><i class="fab fa-behance-square"></i
-            ></a>
+            <div class="sprites">
+              <p>Normal Front</p>
+              <img id="sp1" />
+              <p>Normal Back</p>
+              <img id="sp2" />
+              <p>Shiny Front</p>
+              <img id="sp3" />
+              <p>Shiny Back</p>
+              <img id="sp4" />
+            </div>
           </div>
         </div>
       </div>
