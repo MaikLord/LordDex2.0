@@ -241,13 +241,13 @@ body {
 
 .atributes {
   padding: 15px;
-  margin: 15px;
+  margin: -10px 15px 15px 15px;
   color: white;
   background-color: #404040;
   border-radius: 5px;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .atributes_1 {
