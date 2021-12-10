@@ -70,16 +70,16 @@
               id="search"
               placeholder="Search with Pókemon name or ID..."
               onkeyup="search(this.value)"
-              onfocusout="search(this.value)"
+              onblur="search(this.value)"
               onclick="search(this.value)"
-              onfocus="search(this.value)"
+              onfocus="search()"
             />
             <input
               class="refresh"
               id="refresh"
               type="button"
               value="Search"
-              onclick="search(this.value)"
+              onclick="search()"
             />
           </div>
           <div class="atributes_2">
