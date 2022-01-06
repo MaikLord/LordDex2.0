@@ -26,6 +26,5 @@ function getImage(id) {
 async function search(text) {
   fetchPokemon(text);
 }
-if (caracterCode == 13) {
-  search(this.value);
-}
+
+const StatusSprites = document.getElementsByClassName(".status_status");

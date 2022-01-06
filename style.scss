@@ -181,7 +181,7 @@ body {
     background-color: $gray;
     transition: 0.5s;
   }
-  .status_sprites {
+  .status_base {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: $white;

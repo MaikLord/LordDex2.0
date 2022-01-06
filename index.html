@@ -36,7 +36,7 @@
             <div class="button">
               <div class="next1">
                 <input
-                  onclick="next();changeIcon()"
+                  onclick="next();changeIcon();showHidden()"
                   class="inputnext"
                   type="button"
                   id="inputnext"
@@ -71,22 +71,22 @@
               placeholder="Search with Pókemon name or ID..."
               onkeyup="search(this.value)"
               onclick="search(this.value)"
-              onselect="search(this.value)"
+              onfocus="search(this.value)"
             />
             <input
               class="refresh"
               id="refresh"
               type="button"
               value="Search"
-              onclick="search(text)"
+              onclick="runSearch()"
             />
           </div>
           <div class="atributes_2">
-            <h1 id="pM">Principal Moves</h1>
+            <h1 id="pM">Principal</h1>
             <p id="ab1" title="Move 1"></p>
             <p id="ab2" title="Move 2"></p>
           </div>
-          <div class="status_sprites">
+          <div id="status_base" class="status_base">
             <div class="atributes_3">
               <h1 class="baseh1">Base Status</h1>
               <h1 id="HP">HP</h1>
@@ -124,6 +124,7 @@
               <p> Shiny  Back </p>
               <img id="sp4" />
             </div>
+          </div>
           </div>
         </div>
       </div>

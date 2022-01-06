@@ -227,7 +227,7 @@ body {
   transition: 0.5s;
 }
 
-.search .status_sprites {
+.search .status_base {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -238,7 +238,7 @@ body {
   margin-top: 10px;
 }
 
-.search .status_sprites h1 {
+.search .status_base h1 {
   font-size: 12pt;
   margin: 8.5px 0;
 }
